@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ryan Khoshkbarchi — Papers</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5a5a5a;
+    --border: #e2e2e2;
+    --link: #1a56db;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212;
+      --fg: #e8e8e8;
+      --muted: #a3a3a3;
+      --border: #2b2b2b;
+      --link: #7aa7ff;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 3rem 1.5rem;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  li:first-child {
+    padding-top: 0;
+  }
+  li:last-child {
+    border-bottom: none;
+  }
+  h1 {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  h3.section {
+    margin: 0 0 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  h2 {
+    margin: 0 0 0.35rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+  h2 a {
+    color: var(--fg);
+    text-decoration: none;
+  }
+  h2 a:hover {
+    color: var(--link);
+    text-decoration: underline;
+  }
+  .authors {
+    margin: 0 0 0.5rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  p.desc {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Ryan Khoshkbarchi</h1>
+  <h3 class="section">Projects</h3>
+  <ul>
+    <li>
+      <h2><a href="files/571.pdf">Intel AVX2/AVX512 SIMD Vectorization and its Application to Columnar Database Systems.</a></h2>
+      <p class="authors">Ryan Khoshkbarchi, Brian Heckel — University of Calgary</p>
+      <p class="desc">A custom OLAP query engine using explicit SIMD (SSE/AVX) intrinsics to implement common database algorithms, evaluating how vectorized scans, filters, and aggregations perform against scalar execution on skewed and non uniform datasets. The paper benchmarks gains in performance while also considering energy efficiency trade-offs.</p>
+    </li>
+    <li>
+      <h2><a href="files/599.pdf">Atmospheric plume dispersion modelling using generative AI</a></h2>
+      <p class="authors">Ryan Khoshkbarchi, Rishabh Agarwal, Jamie MacDonald — University of Calgary</p>
+      <p class="desc">A generative modeling approach using conditional GANs for synthesizing methane plume dispersion maps from environmental metadata, offering a cost effective alternative for stakeholders to interpret environmental impact from sparse or incomplete data sources as opposed to expensive satellite imaging.</p>
+    </li>
+  </ul>
+</main>
+</body>
+</html>
