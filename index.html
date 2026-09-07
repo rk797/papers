@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ryan Khoshkbarchi — Papers</title>
+<title>Ryan Khoshkbarchi</title>
 <style>
   :root {
     color-scheme: light dark;
@@ -56,12 +56,15 @@
     font-weight: 700;
   }
   h3.section {
-    margin: 0 0 1.25rem;
+    margin: 2.5rem 0 1.25rem;
     font-size: 0.95rem;
     font-weight: 600;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--muted);
+  }
+  h3.section:first-of-type {
+    margin-top: 0;
   }
   h2 {
     margin: 0 0 0.35rem;
@@ -76,7 +79,7 @@
     color: var(--link);
     text-decoration: underline;
   }
-  .authors {
+  .authors, .date {
     margin: 0 0 0.5rem;
     font-size: 0.85rem;
     color: var(--muted);
@@ -86,17 +89,45 @@
     font-size: 0.95rem;
     color: var(--muted);
   }
+  a.card {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+  a.card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 0.9rem;
+    background: transparent;
+  }
+  a.card:hover h2 {
+    color: var(--link);
+    text-decoration: underline;
+  }
 </style>
 </head>
 <body>
 <main>
   <h1>Ryan Khoshkbarchi</h1>
+  <h3 class="section">Blog</h3>
+  <ul>
+    <li>
+      <a class="card" href="blog/nvme-fpga.html">
+        <img src="files/img/nvme/nvme.png">
+        <h2>How I created an NVMe storage controller on an Artix 7 FPGA</h2>
+        <p class="date">4 September 2026</p>
+        <p class="desc">An NVMe storage controller in FPGA fabric and how a software/hardware co-design approach can be used to store data when resources are limmited.</p>
+      </a>
+    </li>
+  </ul>
   <h3 class="section">Projects</h3>
   <ul>
     <li>
       <h2><a href="files/571.pdf">Intel AVX2/AVX512 SIMD Vectorization and its Application to Columnar Database Systems.</a></h2>
       <p class="authors">Ryan Khoshkbarchi, Brian Heckel — University of Calgary</p>
-      <p class="desc">A custom OLAP query engine using explicit SIMD (SSE/AVX) intrinsics to implement common database algorithms, evaluating how vectorized scans, filters, and aggregations perform against scalar execution on skewed and non uniform datasets. The paper benchmarks gains in performance while also considering energy efficiency trade-offs.</p>
+      <p class="desc">An OLAP query engine that takes advantage of SIMD (SSE/AVX) intrinsics to implement common database algorithms, evaluating how vectorized scans, filters, and aggregations perform against scalar ones on skewed and non uniform datasets. The paper benchmarks gains in performance while also considering energy efficiency trade offs.</p>
     </li>
     <li>
       <h2><a href="files/599.pdf">Atmospheric plume dispersion modelling using generative AI</a></h2>
