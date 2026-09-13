@@ -79,6 +79,17 @@
     color: var(--link);
     text-decoration: underline;
   }
+  a.github-link {
+    display: block;
+    width: fit-content;
+    margin-top: 0.2rem;
+    color: #3b82f6;
+    text-decoration: none;
+  }
+  a.github-link:hover {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+  }
   .authors, .date {
     margin: 0 0 0.5rem;
     font-size: 0.85rem;
@@ -110,6 +121,7 @@
 </head>
 <body>
 <main>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <h1>Ryan Khoshkbarchi</h1>
   <h3 class="section">Blog</h3>
   <ul>
@@ -125,6 +137,7 @@
   <ul>
     <li>
       <h2><a href="files/571.pdf">Intel AVX2/AVX512 SIMD Vectorization and its Application to Columnar Database Systems.</a></h2>
+      <a class="github-link" target="_blank" href="https://github.com/rk797/avx2-olap-executor"><i class="bi bi-box-arrow-in-up-right" aria-hidden="true"></i> GitHub</a>
       <p class="authors">Ryan Khoshkbarchi, Brian Heckel — University of Calgary</p>
       <p class="desc">An OLAP query engine that takes advantage of SIMD (SSE/AVX) intrinsics to implement common database algorithms, evaluating how vectorized scans, filters, and aggregations perform against scalar ones on skewed and non uniform datasets. The paper benchmarks gains in performance while also considering energy efficiency trade offs.</p>
     </li>
